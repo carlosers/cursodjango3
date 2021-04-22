@@ -40,6 +40,7 @@ git push -u origin master
 Add remote 
 git remote add origin endereco
 git remote add origin https://github.com/Gpzim98/cursoblogpessoal.git
+// posso apontar para vários remotes:github, bitbucket etc
 
 Listar branchs
 git branch -v 
