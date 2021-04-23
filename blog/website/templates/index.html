@@ -1,0 +1,17 @@
+<h1>Blog do Carlos</h1>
+<p>
+    Nome do curso: {{nome}}
+</p>
+<h2>Lista de tecnologias aprendidas</h2>
+<p>
+    {{ lista_tecnologias }}
+</p>
+<ol>
+    {% for item in lista_tecnologias %}
+        {% if item == 'Django' %}
+            <li><b>{{ item }}</b></li>
+        {% else %}
+            <li>{{ item }}</li>
+        {% endif %}
+    {% endfor %}
+</ol>

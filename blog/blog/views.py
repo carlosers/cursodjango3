@@ -6,6 +6,6 @@ def current_datetime(request):
     html = "<html><body>It is now %s.</body></html>" % now
     return HttpResponse(html)
 
-def hello(request):
-    hello = "<html><body>Seja bem-vindo meus amigos!"
+def hello_world(request):
+    hello = "<html><body>Seja bem-vindo meus amigos!</body></html>"
     return HttpResponse(hello)
