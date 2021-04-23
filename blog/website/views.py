@@ -1,5 +1,6 @@
 from django.shortcuts import render
 #from django.http import HttpResponse
+from .models import Post
 
 def hello_blog(request):
 
@@ -9,7 +10,15 @@ def hello_blog(request):
         'Systemctl'
     ]
 
-    data = {'nome': 'Curso de Django 3', 'lista_tecnologias':lista}
+    #list_posts = Post.objects.filter()
+    list_posts = Post.objects.all() # pega todos os posts do bd
+
+    data = {
+        'nome': 'Curso de Django 3', 
+        'lista_tecnologias':lista, 
+        'posts': list_posts
+    }
+
 
     #return HttpResponse("blog")
     return render(request,'index.html', data)
